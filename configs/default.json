@@ -1,0 +1,52 @@
+{
+  "assistant": {
+    "name": "AntiGravity Jarvis",
+    "default_mode": "professional",
+    "wake_words": ["hey jarvis", "antigravity"],
+    "supported_languages": ["en", "hi", "ur"],
+    "greeting_enabled": true,
+    "greeting_template": "Welcome back sir. Systems online."
+  },
+  "runtime": {
+    "offline_required": true,
+    "low_ram_mode": false,
+    "gpu_enabled": true,
+    "max_context_messages": 14,
+    "ui_mode": "localhost",
+    "data_dir": "./data"
+  },
+  "llm": {
+    "provider": "ollama",
+    "endpoint": "http://127.0.0.1:11434",
+    "primary_model": "qwen2.5:7b-instruct",
+    "coder_model": "deepseek-coder:6.7b",
+    "embedding_model": "nomic-embed-text",
+    "temperature": 0.55
+  },
+  "memory": {
+    "provider": "chroma",
+    "persist_dir": "./data/memory",
+    "semantic_recall_limit": 6
+  },
+  "voice": {
+    "wake_word_engine": "openwakeword",
+    "stt_engine": "faster-whisper",
+    "tts_engine": "piper",
+    "voice_profile": "male_futuristic",
+    "interruptible": true
+  },
+  "avatar": {
+    "runtime": "unity",
+    "transport": "websocket",
+    "endpoint": "ws://127.0.0.1:8765/avatar",
+    "style": "holographic_sci_fi"
+  },
+  "emotion": {
+    "enabled": true,
+    "empathy_level": "high"
+  },
+  "system_control": {
+    "enabled": true,
+    "safe_mode": true
+  }
+}

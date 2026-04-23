@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AntiGravity Jarvis</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">OFFLINE AI CONTROL ROOM</p>
+        <h1>AntiGravity Jarvis</h1>
+      </div>
+      <div class="status-pill" id="status-pill">Systems initializing</div>
+    </header>
+
+    <main class="grid">
+      <section class="panel conversation-panel">
+        <div class="panel-head">
+          <h2>Conversation Console</h2>
+          <span id="emotion-chip">calm</span>
+        </div>
+        <div class="conversation-log" id="conversation-log"></div>
+        <form id="chat-form" class="composer">
+          <textarea id="message-input" placeholder="Issue a command to Jarvis..." rows="4"></textarea>
+          <button type="submit">Transmit</button>
+        </form>
+      </section>
+
+      <aside class="panel hud-panel">
+        <div class="panel-head">
+          <h2>Jarvis HUD</h2>
+          <span id="mode-chip">professional</span>
+        </div>
+
+        <div class="avatar-core">
+          <div class="orb"></div>
+          <div class="ring ring-a"></div>
+          <div class="ring ring-b"></div>
+          <div class="ring ring-c"></div>
+        </div>
+
+        <div class="telemetry">
+          <div class="metric">
+            <span class="metric-label">Wake Words</span>
+            <span class="metric-value" id="wake-words">loading</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Reminders</span>
+            <span class="metric-value" id="reminders">none</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Tasks</span>
+            <span class="metric-value" id="todos">none</span>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <p>Suggested Commands</p>
+          <button class="ghost" data-fill="run diagnostics">Run diagnostics</button>
+          <button class="ghost" data-fill="remember that my primary language is English">Store memory</button>
+          <button class="ghost" data-fill="remind me to review the architecture">Add reminder</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

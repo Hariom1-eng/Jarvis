@@ -1,0 +1,1 @@
+"""Desktop UI integration helpers."""
